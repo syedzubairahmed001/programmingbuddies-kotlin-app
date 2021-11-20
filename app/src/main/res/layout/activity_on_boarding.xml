@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.onboarding.OnBoardingActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material_card_view_splash"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/backgroundCard"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpagerOnBoarding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageButton
+        android:id="@+id/next_button_splash"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="-32dp"
+        android:background="@drawable/round_next_button"
+        android:elevation="4dp"
+        android:padding="0dp"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/material_card_view_splash" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dotsIndicator_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:dotsColor="@color/black"
+        app:dotsCornerRadius="6dp"
+        app:dotsSize="12dp"
+        app:dotsSpacing="4dp"
+        app:dotsWidthFactor="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_button_splash"
+        app:selectedDotColor="@color/dotsSelectedColor" />
+
+    <TextView
+        android:id="@+id/title_onBoarding"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Make Logs"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:textColor="@color/dotsSelectedColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dotsIndicator_splash" />
+
+    <TextView
+        android:id="@+id/subtitle_onBoarding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.7"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_onBoarding"
+        tools:text="Make logs of books you're reading" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/skip_button_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:text="Skip"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
