@@ -6,14 +6,190 @@
     android:layout_height="match_parent"
     tools:context=".ui.userdetails.UserDetailsActivity">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/linear_layout_linkedin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/linkedin_user_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Your Linkedin Account"
+            android:fontFamily="@font/quicksand_bold"
+            style="@style/ColoredText"
+            android:textSize="20sp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+        <EditText
+            android:id="@+id/linkedin_details_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Enter your linkedin"
+            android:background="@drawable/rounded_text_box"
+            android:maxLines="1"
+            android:paddingHorizontal="16dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:fontFamily="@font/quicksand_medium"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_github"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_linkedin"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/github_user_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Your GitHub Account"
+            android:textSize="20sp"
+            android:fontFamily="@font/quicksand_bold"
+            style="@style/ColoredText"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+        <EditText
+            android:id="@+id/github_details_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Enter your github"
+            android:background="@drawable/rounded_text_box"
+            android:maxLines="1"
+            android:paddingHorizontal="16dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:fontFamily="@font/quicksand_medium"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_github"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/language_user_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Your Favorite Language"
+            android:fontFamily="@font/quicksand_bold"
+            style="@style/ColoredText"
+            android:textSize="20sp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+        <EditText
+            android:id="@+id/language_details_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Not the one you speak"
+            android:background="@drawable/rounded_text_box"
+            android:maxLines="1"
+            android:paddingHorizontal="16dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:fontFamily="@font/quicksand_medium"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_language"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/code_user_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Write Some Code"
+            android:fontFamily="@font/quicksand_bold"
+            style="@style/ColoredText"
+            android:textSize="20sp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+        <EditText
+            android:id="@+id/code_details_edit"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Hey"
+            android:ellipsize="end"
+            android:inputType="textMultiLine"
+            android:gravity="start"
+            android:background="@drawable/rounded_text_box"
+            android:paddingHorizontal="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:fontFamily="@font/quicksand_medium"
+            />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Details Activity"
-        android:textSize="30sp"
+        android:layout_gravity="end"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/next_button"
+        android:elevation="8dp"
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="16dp"
+        android:src="@drawable/ic_next_arrow"
+        app:tint="@color/nextIconTint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <include
+        android:id="@+id/loadingLayout"
+        layout="@layout/loading_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,8 @@
-package com.example.programmingbuddies
+package com.example.programmingbuddies.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.programmingbuddies.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

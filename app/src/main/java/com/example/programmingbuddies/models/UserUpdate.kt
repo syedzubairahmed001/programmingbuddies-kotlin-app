@@ -1,10 +1,7 @@
 package com.example.programmingbuddies.models
 
-data class User(
-    val name: String = "",
-    val email: String = "",
-    val profilePictureURL: String = "",
-    val language: String = "",
+data class UserUpdate(
+    val lang: String = "",
     val linkedin: String = "",
     val github: String = "",
     val profileProgram: String = ""

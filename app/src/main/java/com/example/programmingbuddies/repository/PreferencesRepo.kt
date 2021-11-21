@@ -1,10 +1,13 @@
 package com.example.programmingbuddies.repository
 
+import android.util.Log
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
+import com.example.programmingbuddies.models.User
+import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
@@ -19,9 +22,13 @@ class PreferencesRepo @Inject constructor(private val dataStore: DataStore<Prefe
         private val ON_BOARDING_KEY = booleanPreferencesKey("OnBoarding")
     }
 
-    suspend fun saveUserData(name: String) = withContext(Dispatchers.IO) {
+    suspend fun saveUserData(user: User) = withContext(Dispatchers.IO) {
+        Log.d("AuthViewModel", "saveUser: "+user)
+        val userSerialized = Gson().toJson(user)
+        Log.d("AuthViewModel", "saveUser: "+userSerialized)
         dataStore.edit {
-            it[USER_KEY] = name
+            Log.d("AuthViewModel", "saveUserInEdit: "+userSerialized)
+            it[USER_KEY] = userSerialized
         }
     }
 
@@ -31,9 +38,15 @@ class PreferencesRepo @Inject constructor(private val dataStore: DataStore<Prefe
         }
     }
 
-    suspend fun getUserData(): String? = withContext(Dispatchers.IO) {
+    suspend fun getUserData(): User? = withContext(Dispatchers.IO) {
         dataStore.data.map {
-            return@map it[USER_KEY]
+            Log.d("AuthViewModel", "getUser: "+it[USER_KEY])
+            val userSerialize = it[USER_KEY]
+            return@map userSerialize?.let { sUser->
+                Log.d("AuthViewModel", "getUser: "+sUser)
+                Log.d("AuthViewModel", "getUser: "+Gson().fromJson(sUser,User::class.java))
+                Gson().fromJson(sUser,User::class.java)
+            }
         }.first()
     }
 

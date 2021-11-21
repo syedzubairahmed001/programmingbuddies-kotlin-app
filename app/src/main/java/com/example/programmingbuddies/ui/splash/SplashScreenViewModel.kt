@@ -20,7 +20,7 @@ class SplashScreenViewModel @Inject constructor(private val authRepo: AuthRepo) 
 
     private suspend fun isOnBoardingCompleted() = authRepo.isUserOnBoardingCompleted()
 
-    private suspend fun isUserDetailsCompleted() = authRepo.isUserLoggedIn()
+    private suspend fun isUserDetailsCompleted() = authRepo.getCurrentUser()?.linkedin != ""
 
     fun onTimerComplete() = viewModelScope.launch {
         if (!isOnBoardingCompleted()) {

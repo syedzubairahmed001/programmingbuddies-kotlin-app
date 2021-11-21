@@ -13,4 +13,5 @@
     <color name="dotsSelectedColor">#00133D</color>
     <color name="login_text_color">#003cbf</color>
     <color name="login_subtitle_color">#6A6A6A</color>
+    <color name="nextIconTint">#f8f8fa</color>
 </resources>

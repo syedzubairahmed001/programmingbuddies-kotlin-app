@@ -4,6 +4,10 @@ import com.example.programmingbuddies.R
 import com.example.programmingbuddies.models.OnBoardingItem
 
 
+enum class ErrorType {
+    NO_INTERNET, UNKNOWN
+}
+
 val onBoardingList = listOf(
     OnBoardingItem(
         id = 0,

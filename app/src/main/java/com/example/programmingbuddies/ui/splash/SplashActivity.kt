@@ -7,7 +7,7 @@ import android.os.Handler
 import android.view.animation.AnimationUtils
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.example.programmingbuddies.MainActivity
+import com.example.programmingbuddies.ui.home.MainActivity
 import com.example.programmingbuddies.R
 import com.example.programmingbuddies.databinding.ActivitySplashBinding
 import com.example.programmingbuddies.ui.auth.AuthActivity
