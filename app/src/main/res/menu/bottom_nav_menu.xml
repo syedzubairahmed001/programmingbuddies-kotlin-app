@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/cardsFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_next_arrow" />
+
+    <item android:id="@+id/matchesFragment"
+        android:title="Matches"
+        android:icon="@drawable/ic_next_arrow" />
+
+    <item android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/ic_next_arrow" />
+
+</menu>

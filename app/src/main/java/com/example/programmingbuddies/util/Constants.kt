@@ -13,7 +13,7 @@ val onBoardingList = listOf(
         id = 0,
         anim = R.raw.welcome,
         title = "Welcome",
-        subtitle = "I don't know what to write"
+        subtitle = "We hope you have a great time"
     ),
     OnBoardingItem(
         id = 1,
